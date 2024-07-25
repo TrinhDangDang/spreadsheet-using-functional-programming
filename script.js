@@ -73,7 +73,7 @@ const infixToFunction = {
     return functionExpanded === x ? functionExpanded : evalFormula(functionExpanded, cells);
   }
   
-  window.onload = () => {
+  window.onload = () => { //window.onload method is a special event handler in javascript that executes a function when the entire page has finished loading
     const container = document.getElementById("container");
     const createLabel = (name) => {
       const label = document.createElement("div");
@@ -90,7 +90,7 @@ const infixToFunction = {
         input.type = "text";
         input.id = letter + number;
         input.ariaLabel = letter + number;
-        input.onchange = update;
+        input.onchange = update; //each input field is created and assigned an 'onchange' EVENT LISTENER that poinst to the update function
         container.appendChild(input);
       })
     })
